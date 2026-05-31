@@ -94,6 +94,6 @@ fig.text(0.75, -0.05, '(b) Resultado para processos IO-Bound.', ha='center', fon
 
 plt.tight_layout()
 
-plt.savefig('meu_grafico_resultados.png', dpi=300, bbox_inches='tight')
+plt.savefig('meu_grafico_resultados_longos.png', dpi=300, bbox_inches='tight')
 
 plt.show()
