@@ -28,7 +28,7 @@ for arquivo in arquivos:
         
         algoritmo_nome = mapa_algoritmos.get(algoritmo_str, algoritmo_str.capitalize())
         
-        df_temp = pd.read_csv(arquivo, sep='\s+', header=None, names=['Tipo', 'PID', 'Tempo'])
+        df_temp = pd.read_csv(arquivo, sep=r'\s+', header=None, names=['Tipo', 'PID', 'Tempo'])
         
         df_temp['Algoritmo'] = algoritmo_nome
         df_temp['Número de processos'] = num_processos
@@ -93,4 +93,7 @@ fig.text(0.28, -0.05, '(a) Resultado para processos CPU-Bound.', ha='center', fo
 fig.text(0.75, -0.05, '(b) Resultado para processos IO-Bound.', ha='center', fontsize=11)
 
 plt.tight_layout()
+
+plt.savefig('meu_grafico_resultados.png', dpi=300, bbox_inches='tight')
+
 plt.show()
